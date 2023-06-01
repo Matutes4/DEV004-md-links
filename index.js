@@ -1,3 +1,9 @@
-module.exports = () => {
+//module.exports = () => {
   // ...
-};
+//};
+
+/*
+import { mdLinks } from "./mdlinks.js";
+
+mdLinks();
+*/
