@@ -8,9 +8,9 @@ import {
   validate,
 } from "./asistente-api.js";
 
-// Función principal mdLinks
-// Parámetro 'path': la ruta del archivo
-// Parámetro 'options': opciones adicionales
+// Función principal mdLinks.
+// Parámetro 'path': la ruta del archivo.
+// Parámetro 'options': validate.
 export const mdLinks = (path, options) => {
   // Devolver una promesa para manejar el resultado de manera asíncrona
   return new Promise((resolve, reject) => {
@@ -60,7 +60,7 @@ export const mdLinks = (path, options) => {
 };
 
 // Ejemplo de uso de la función mdLinks
-mdLinks("README.md", { validate: true })
+mdLinks("README.md", { false: true })
   .then((result) => {
     console.log(result); // Mostramos los enlaces validados
   })

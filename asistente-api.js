@@ -1,4 +1,4 @@
-//sistema de archivos o file system.  módulo de node.js incorporado que proporciona funcionalidades para
+//file system o sistema de archivo: Es un módulo de node.js incorporado que proporciona funcionalidades para
 //trabajar con el sistema de archivos del sistema operativo. es el módulo de Node.js para manejar operaciones de archivo.
 import fs from "fs";
 
@@ -7,6 +7,7 @@ import path from "path";
 
 //import fetch from "node-fetch";
 
+//Axios es una biblioteca de JavaScript que se utiliza para realizar solicitudes HTTP.
 import axios from "axios";
 
 //¿existe una ruta?
@@ -18,14 +19,14 @@ const esRutaAbsoluta = (ruta) => path.isAbsolute(ruta);
 // convierte a ruta absoluta si es que es relativa
 const convertirRutaAbsoluta = (ruta) => path.resolve(ruta);
 
-// comprobando si es un archivo archivo Markdown
+// comprobando si es un archivo Markdown
 const esArchivoMd = (ruta) => path.extname(ruta) === ".md";
 
 
 // Función que lee archivo md
 function leerArchivo(ruta) {
   return new Promise(function (resolve, reject) {
-    // Se utiliza la función 'readFile' del módulo fs para leer el contenido del archivo especificado por 'ruta'
+    // Se utiliza la función 'readFile' del módulo fs para leer el contenido del archivo.
     fs.readFile(ruta, "utf8", function (err, data) {
       if (err) {
         reject(err); 
@@ -91,7 +92,7 @@ const validate = (listaEnlaces) => {
 
 
 
-// Exportamos las funciones
+
 export {
   existeRuta,
   esRutaAbsoluta,
