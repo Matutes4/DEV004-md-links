@@ -60,10 +60,11 @@ export const mdLinks = (path, options) => {
 };
 
 // Ejemplo de uso de la función mdLinks
-mdLinks("README.md", { false: true })
+/*mdLinks("ejemplo.md", { validate: true })
   .then((result) => {
     console.log(result); // Mostramos los enlaces validados
   })
   .catch((error) => {
     console.log(error); // Mostramos el error si lo hay
   });
+  */
