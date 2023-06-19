@@ -13,6 +13,7 @@ import axios from "axios";
 //¿existe una ruta?
 const existeRuta = (ruta) => fs.existsSync(ruta); //true or false
 
+
 //Comprobando si es absoluta o relativa
 const esRutaAbsoluta = (ruta) => path.isAbsolute(ruta);
 
@@ -27,7 +28,9 @@ const esArchivoMd = (ruta) => path.extname(ruta) === ".md";
 function leerArchivo(ruta) {
   return new Promise(function (resolve, reject) {
     // Se utiliza la función 'readFile' del módulo fs para leer el contenido del archivo.
-    fs.readFile(ruta, "utf8", function (err, data) {
+    //utf8 párametro que le dice a la función que queremos que el contenido del archivo se lea como texto.
+    //tercer argumento "function" función de devolución de llamada.
+    fs.readFile(ruta, "utf8", function (err, data) { 
       if (err) {
         reject(err); 
       } else {
@@ -44,9 +47,13 @@ const encontrarEnlaces = (contenido, archivo) => {
   const listaEnlaces = [];
   let match;
 
-  while ((match = expresionRegular.exec(contenido)) !== null) {
-    const texto = match[1]; // Texto del enlace
-    const url = match[2]; // URL del enlace
+   // Aquí comienza un bucle while que se ejecutará mientras encuentre coincidencias en el contenido.
+    // La función exec() de la expresión regular busca coincidencias en el contenido.
+    // Si encuentra una coincidencia, la asigna a la variable match y el bucle se ejecuta.
+    // Si no encuentra más coincidencias, la función devuelve null y el bucle se detiene.
+  while ((match = expresionRegular.exec(contenido)) !== null) { //y no sea igual a null
+    const texto = match[1]; // Texto del enlace, primer grupo de captura
+    const url = match[2]; // URL del enlace, segundo grupo de captura
     const objetoEnlace = {
       href: url,
       text: texto,
@@ -83,6 +90,7 @@ const validate = (listaEnlaces) => {
   });
 
   // Retorna una nueva promesa que se resolverá cuando todas las solicitudes se completen
+  
   return Promise.all(httpRequests);
 };
 

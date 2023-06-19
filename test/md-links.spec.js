@@ -4,6 +4,7 @@ import { esRutaAbsoluta } from "../asistente-api.js";
 import { convertirRutaAbsoluta } from "../asistente-api.js";
 import { esArchivoMd } from "../asistente-api.js";
 import { leerArchivo } from "../asistente-api.js";
+import { mdLinks } from "../mdLinks.js";
 //import { encontrarEnlaces } from "../asistente-api.js";
 //import { validate } from "../asistente-api.js";
 //import { mdLinks } from "../mdLinks.js";
@@ -62,6 +63,38 @@ describe("esArchivoMd", () => {
    })
 });
 
+describe('mdLinks', () => {
+  it('mdLinks procesa un solo archivo con cuatro links sin validar', () => {
+    const ruta = "C:\\Users\\glendymar\\DEV004-md-links\\ejemplo.md";
+    return mdLinks(ruta, { validate: false }).then((array) => {
+      expect(array).toEqual([
+        {
+          href: 'https://es.wikipedia.org/wiki/Markdown',
+          text: 'Markdown',
+          file: "C:\\Users\\glendymar\\DEV004-md-links\\ejemplo.md",
+        },
+        {
+          href: 'https://nodejs.org/',
+          text: 'Node.js',
+          file: "C:\\Users\\glendymar\\DEV004-md-links\\ejemplo.md",
+        },
+        {
+          href: 'https://developers.google.com/v8/',
+          text: 'motor de JavaScript V8 de Chrome',
+          file: "C:\\Users\\glendymar\\DEV004-md-links\\ejemplo.md",
+          
+        },
+        {
+          href: 'http://www.example.com/broken-link',
+          text: 'linkroto',
+          file: "C:\\Users\\glendymar\\DEV004-md-links\\ejemplo.md",
+          
+        },
+      ]);
+    });
+  });
+});
+ 
 
 
 
