@@ -61,8 +61,11 @@ describe("esArchivoMd", () => {
    it ("comprobando si no es un archivo markdowm", () => {
     expect(esArchivoMd(path9)).toBe(false)
    })
-});
+})
 
+
+
+ 
 describe('mdLinks', () => {
   it('mdLinks procesa un solo archivo con cuatro links sin validar', () => {
     const ruta = "C:\\Users\\glendymar\\DEV004-md-links\\ejemplo.md";
@@ -94,6 +97,69 @@ describe('mdLinks', () => {
     });
   });
 });
+
+describe('mdLinks', () => {
+  // ...
+
+  it('mdLinks procesa un solo archivo con dos links y valida los enlaces', () => {
+    const ruta = "C:\\Users\\glendymar\\DEV004-md-links\\test.md";
+    const opciones = { validate: true };
+
+    return mdLinks(ruta, opciones)
+      .then((enlaces) => {
+        expect(enlaces).toEqual([
+          {
+            href: 'https://curriculum.laboratoria.la/es/topics/javascript/04-arrays',
+            text: 'Arreglos',
+            file: "C:\\Users\\glendymar\\DEV004-md-links\\test.md",
+            status: 200,
+            message: 'OK'
+          },
+          {
+            href: 'https://curriculum.laboratoria.la/es/topics/javascript/05-objects/01-objects',
+            text: 'Objetos en JavaScript',
+            file: "C:\\Users\\glendymar\\DEV004-md-links\\test.md",
+            status: 200,
+            message: 'OK'
+          }
+        ]);
+      });
+  });
+});
+
+
+
+
+
+
+
+describe('mdLinks', () => {
+  it('mdLinks debería validar los links encontrados', () => {
+    const ruta = "C:\\Users\\glendymar\\DEV004-md-links\\ejemplo.md";
+    const opciones = { validate: true };
+
+    // Utilizamos return en la prueba para que Jest espere la resolución de la promesa
+    return mdLinks(ruta, opciones)
+      .then((enlaces) => {
+        expect(Array.isArray(enlaces)).toBe(true);
+
+        enlaces.forEach((enlace) => {
+          expect(enlace).toHaveProperty('href');
+          expect(enlace).toHaveProperty('text');
+          expect(enlace).toHaveProperty('file');
+          expect(enlace).toHaveProperty('status');
+          expect(enlace).toHaveProperty('message');
+
+          if (enlace.status === 200) {
+            expect(enlace.message).toBe('OK');
+          } else {
+            expect(enlace.message).not.toBe('OK');
+          }
+        });
+      });
+  });
+});
+
  
 
 

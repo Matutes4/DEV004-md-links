@@ -40,6 +40,15 @@ function leerArchivo(ruta) {
   });
 }
 
+/*leerArchivo("ejemplo.md")
+  .then(function (resultado) {
+    console.log(resultado); // Imprime el resultado en la consola
+  })
+  .catch(function (error) {
+    console.log(error); // Imprime el error en la consola si ocurre alguno
+  });
+*/
+
 // Función que busca y devuelve los enlaces encontrados en el contenido
 // Recibe como parámetros 'contenido' (el contenido del archivo) y 'archivo' (nombre del archivo)
 const encontrarEnlaces = (contenido, archivo) => {

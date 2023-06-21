@@ -1,9 +1,10 @@
+#!/usr/bin/env node
 import { mdLinks } from './mdLinks.js';
 import axios from 'axios';
 import chalk from 'chalk';
 
 const args = process.argv.slice(2);
-//const Path = args[0];
+const Path = args[0];
 const options = args.slice(1);
 
 const executeMdLinks = (Path, options) => {
@@ -14,7 +15,7 @@ const executeMdLinks = (Path, options) => {
     .then(links => {
       if (stats && validate) {
         const totalLinks = links.length;
-        const uniqueLinks = [...new Set(links.map(link => link.href))].length;
+        const uniqueLinks = [...new Set(links.map(link => link.href))].length; 
         const brokenLinks = links.filter(link => link.status >= 400).length;
 
         console.log(chalk.hex('#00FFFF').bold('Total:'), chalk.hex('#00FF00')(totalLinks));
@@ -60,7 +61,8 @@ const executeMdLinks = (Path, options) => {
     });
 };
 
-executeMdLinks('./ejemplo.md', options);
+executeMdLinks(Path, options);
+
 
 
 
