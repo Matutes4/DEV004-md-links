@@ -5,6 +5,15 @@
 
 * [1. Preámbulo](#1-preámbulo)
 * [2. Descripción](#2-Descripción)
+* [3. instalación](#3-instalación)
+* [4. Uso](#4-Uso)
+* [5. Planificación](#5-planificación)
+* [6. Diagrama de flujo](#3-Diagrama-de-flujo)
+* [7. pruebas unitarias](#7-pruebas-unitarias)
+* [8. Objetivos de aprendizaje](#8-objetivos-de-aprendizaje)
+* [9. Archivos del proyecto](#9-Archivos-del-proyecto)
+* [10. Este proyecto consta de dos partes](#10-Este-proyecto-consta-de-dos-partes)
+* [11. Checklist](#11-Checklist)
 
 ***
 
@@ -30,6 +39,30 @@ o en un área de facturación verificar los links rotos de una factura dígital.
 ![md-links](https://user-images.githubusercontent.com/110297/42118443-b7a5f1f0-7bc8-11e8-96ad-9cc5593715a6.jpg)
 
 ## 2. Descripción
-Md-links es una potente herramienta de línea de comandos (CLI) que analiza tus archivos Markdown en busca de enlaces. Su función principal es verificar la validez de estos enlaces, es decir, comprobar si los enlaces están activos y funcionan correctamente. De esta manera, te ayuda a identificar y corregir enlaces rotos o incorrectos en tus documentos Markdown.
+md-links es una potente herramienta de línea de comandos (CLI) que analiza tus archivos Markdown en busca de enlaces. Su función principal es verificar la validez de estos enlaces, es decir, comprobar si los enlaces están activos y funcionan correctamente. De esta manera, te ayuda a identificar y corregir enlaces rotos o incorrectos en tus documentos Markdown.
  
  En resumen es una herramienta que te ayuda a mantener el control de los enlaces en tus archivos Markdown, verificando su validez y brindándote información relevante para mejorar la calidad de tus documentos y proyectos.
+
+ ## 3. instalación 
+
+ ## 4. Uso
+
+ ## 5. Planificación
+
+ ## 6. Diagrama de flujo
+ ![mdApi](imagenes/1.jpg)
+ ![mdApi](imagenes/2.jpg)
+ ![mdApi](imagenes/3.jpg)
+
+ ## 7. Pruebas Unitarias
+
+ ## 8. Objetivos de Aprendizaje
+
+ ## 9. Archivos del proyecto
+
+ ## 10. Este proyecto consta de dos partes
+
+ ## 11. Checklist
+
+ 
+
