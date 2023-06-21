@@ -50,9 +50,9 @@ md-links es una potente herramienta de línea de comandos (CLI) que analiza tus 
  ## 5. Planificación
 
  ## 6. Diagrama de flujo
- ![mdApi](imagenes/1.jpg)
- ![mdApi](imagenes/2.jpg)
- ![mdApi](imagenes/3.jpg)
+ ![mdApi](imagenes/1.png)
+ ![mdApi](imagenes/2.png)
+ ![mdApi](imagenes/3.png)
 
  ## 7. Pruebas Unitarias
 
