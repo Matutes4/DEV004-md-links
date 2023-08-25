@@ -6,14 +6,11 @@
 * [1. Preámbulo](#1-preámbulo)
 * [2. Descripción](#2-Descripción)
 * [3. instalación](#3-instalación)
-* [4. Uso](#4-Uso)
-* [5. Planificación](#5-planificación)
-* [6. Diagrama de flujo](#3-Diagrama-de-flujo)
-* [7. pruebas unitarias](#7-pruebas-unitarias)
-* [8. Objetivos de aprendizaje](#8-objetivos-de-aprendizaje)
-* [9. Archivos del proyecto](#9-Archivos-del-proyecto)
-* [10. Este proyecto consta de dos partes](#10-Este-proyecto-consta-de-dos-partes)
-* [11. Checklist](#11-Checklist)
+* [4. Planificación](#5-planificación)
+* [5. Diagrama de flujo](#3-Diagrama-de-flujo)
+* [6. pruebas unitarias](#7-pruebas-unitarias)
+* [7. Archivos del proyecto](#9-Archivos-del-proyecto)
+* [8. Este proyecto consta de dos partes](#10-Este-proyecto-consta-de-dos-partes)
 
 ***
 
@@ -45,22 +42,25 @@ md-links es una potente herramienta de línea de comandos (CLI) que analiza tus 
 
  ## 3. instalación 
 
- ## 4. Uso
+ Antes de comenzar a utilizar Md-links, necesitarás instalarlo en tu entorno de desarrollo. Sigue los pasos a continuación para completar la instalación:
 
- ## 5. Planificación
+Abre tu terminal o línea de comandos. Ejecuta el siguiente comando para instalar Md-links:
+
+npm i glendy-md-links
+
+ ## 4. Planificación
   ![Issues](imagenes/issues.png)
 
- ## 6. Diagrama de flujo
+ ## 5. Diagrama de flujo
  ![mdApi](imagenes/1.png)
  ![mdApi](imagenes/2.png)
  ![mdApi](imagenes/3.png)
 
- ## 7. Pruebas Unitarias
+ ## 6. Pruebas Unitarias
  ![test unitarios](imagenes/test.png)
 
- ## 8. Objetivos de Aprendizaje
 
- ## 9. Archivos del proyecto
+ ## 7. Archivos del proyecto
  
  * `README.md` con descripción del módulo, instrucciones de instalación/uso,
   documentación del API y ejemplos. Todo lo relevante para que cualquier
@@ -79,7 +79,7 @@ md-links es una potente herramienta de línea de comandos (CLI) que analiza tus 
   `mdLinks()`. Tu inplementación debe pasar estos tets.
 
  
- ## 10. Este proyecto consta de dos partes
+ ## 8. Este proyecto consta de dos partes
 
  
 ### 1) JavaScript API
@@ -206,6 +206,6 @@ Unique: 3
 Broken: 1
 ```
 
- ## 11. Checklist
+ 
 
  
